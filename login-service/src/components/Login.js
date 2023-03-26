@@ -8,7 +8,7 @@ import styles from "../styles/Username.module.css";
 const Login = () => {
   const formic = useFormik({
     initialValues: { username: "" },
-    validate:usernameValidate,
+    validate: usernameValidate,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async (values) => {
@@ -32,7 +32,7 @@ const Login = () => {
             </div>
             <div className="textbox flex items-center flex-col gap-6">
               <input
-              {...formic.getFieldProps('username')}
+                {...formic.getFieldProps("username")}
                 type="text"
                 className={styles.textbox}
                 placeholder="Username"
@@ -42,8 +42,8 @@ const Login = () => {
               </button>
             </div>
             <div className="text-center py-4">
-              <span>
-                Not a member
+              <span className="flex gap-2 justify-center">
+                Not a member?
                 <Link className=" text-red-500" to={"./register"}>
                   Register Now
                 </Link>
