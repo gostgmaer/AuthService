@@ -12,6 +12,7 @@ async function connect(){
     // const db = await mongoose.connect(getUri);
     const db = await mongoose.connect(ENV.ATLAS_URI);
     console.log("Database Connected")
+   // console.log(db);
     return db;
 }
 
